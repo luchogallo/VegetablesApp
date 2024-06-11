@@ -38,30 +38,30 @@ export const Header = ({ cart, removeFromCart, increaseQuantity, decreaseQuantit
                                                     </thead>
                                                     <tbody>
                                                         {
-                                                            cart.map(guitar => (
+                                                            cart.map(vegetable => (
                                                                 <tr
-                                                                    key={guitar.id}
+                                                                    key={vegetable.id}
                                                                 >
                                                                     <td>
-                                                                        <img className="img-fluid" src={`/img/${guitar.image}.jpg`} alt="imagen producto" />
+                                                                        <img className="img-fluid" src={`/img/${vegetable.image}.jpg`} alt="imagen producto" />
                                                                     </td>
-                                                                    <td>{guitar.name}</td>
+                                                                    <td>{vegetable.name}</td>
                                                                     <td className="fw-bold">
-                                                                            ${guitar.price}
+                                                                            ${vegetable.price}
                                                                     </td>
                                                                     <td className="flex align-items-start gap-4">
                                                                         <button
                                                                             type="button"
                                                                             className="btn btn-dark"
-                                                                            onClick={() => decreaseQuantity(guitar.id)}
+                                                                            onClick={() => decreaseQuantity(vegetable.id)}
                                                                         >
                                                                             -
                                                                         </button>
-                                                                            {guitar.quantity}
+                                                                            {vegetable.quantity}
                                                                         <button
                                                                             type="button"
                                                                             className="btn btn-dark"
-                                                                            onClick={() => increaseQuantity(guitar.id)}
+                                                                            onClick={() => increaseQuantity(vegetable.id)}
                                                                         >
                                                                             +
                                                                         </button>
@@ -70,7 +70,7 @@ export const Header = ({ cart, removeFromCart, increaseQuantity, decreaseQuantit
                                                                         <button
                                                                             className="btn btn-danger"
                                                                             type="button"
-                                                                            onClick={() => removeFromCart(guitar.id)}
+                                                                            onClick={() => removeFromCart(vegetable.id)}
                                                                         >
                                                                             X
                                                                         </button>
